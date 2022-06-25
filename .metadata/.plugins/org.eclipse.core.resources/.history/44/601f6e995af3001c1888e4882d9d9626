@@ -1,0 +1,44 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Account;
+
+
+public class ExercicioFixacao2 {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter account number:");
+		int Account = sc.nextInt();
+		System.out.println();
+		
+		System.out.println("Enter account Holder:");
+		String Name = sc.nextLine();
+		System.out.println();
+		
+		System.out.println("Is There a initial deposit (y/n):");
+		boolean initialDeposity = sc.nextBoolean();
+		System.out.println();
+		
+		if(initialDeposity) {
+			System.out.println("Enter initial deposit value:");
+			double Value = sc.nextDouble();
+			new Account(Account, Name, initialDeposity, Value);	
+		} 
+		else {
+			new Account(Account, Name, initialDeposity);	
+		}
+		
+		System.out.println("Account data:");
+		System.out.println(Account);
+		
+		
+		sc.close();
+	}
+
+}

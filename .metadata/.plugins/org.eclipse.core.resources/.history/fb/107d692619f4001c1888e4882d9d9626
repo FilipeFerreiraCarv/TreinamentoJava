@@ -1,0 +1,25 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class ExercicioPropostoMatrizes {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt(); int m = sc.nextInt();
+		int[][] mat = new int[n][m];
+		
+		System.out.println(n);
+		System.out.println(m);
+		
+		sc.close();
+		
+		
+	}
+
+}

@@ -1,0 +1,62 @@
+package entities;
+
+public class Account {
+
+	private int account;
+	private String name;
+	private double value;
+	
+	//Constructors
+	public Account(int account, String name, char initialDeposity, double initialValue) {
+		this.account = account;
+		this.name = name;
+		initialDeposity = initialDeposity;
+		this.value = initialValue;
+	}
+		public Account(int account, String name, char initialDeposity) {
+		this.account = account;
+		this.name = name;
+		initialDeposity = initialDeposity;
+	}
+
+	//Getters and Setters
+	public int getAccount() {
+		return account;
+	}
+
+	public void setAccount(int account) {
+		this.account = account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	
+	//Other Functions
+	public void deposit(double Value) {
+		this.value += Value;
+	}
+	
+	public void withdraw(double Value) {
+		this.value -= (Value + 5);
+	}
+		
+	public String toString() {
+		return 	"Account "
+				+ getAccount()
+				+ ", Holder: "
+				+ getName()
+				+ ", Balance : $"
+				+ getValue();
+	}
+	
+}
